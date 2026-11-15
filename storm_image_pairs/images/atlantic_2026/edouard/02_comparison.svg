@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="990" viewBox="0 0 900 990">
+<rect width="900" height="990" fill="#07111d"/>
+<text x="50" y="38" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="white">Edouard — frame 2</text>
+<text x="50" y="72" font-family="Arial,sans-serif" font-size="19" fill="#b9cad9">EPIC 2026-09-01T17:59:02Z · red marker: nearest IBTrACS point</text>
+<image href="02_epic_20260901T175902Z.jpg" x="50" y="105" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<circle cx="404.1" cy="366.5" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="404.1" y1="366.5" x2="420.1" y2="350.5" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="420.1" y="328.5" width="210" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="426.1" y="347.5" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Edouard  29.7°, -93.6°</text>
+
+<text x="450" y="950" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NASA DSCOVR EPIC</text>
+</svg>

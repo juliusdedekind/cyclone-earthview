@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="970" viewBox="0 0 1700 970">
+<rect width="1700" height="970" fill="#07111d"/>
+<text x="25" y="38" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="white">Koji — frame 2</text>
+<text x="25" y="70" font-family="Arial,sans-serif" font-size="19" fill="#b9cad9">EPIC 2026-01-10T02:29:08Z · Himawari 2026-01-10T02:30:00Z · red marker: nearest IBTrACS point</text>
+<image href="02_epic_20260110T022908Z.jpg" x="25" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<image href="02_himawari_20260110T023000Z.png" x="875" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<circle cx="405.3" cy="419.7" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="405.3" y1="419.7" x2="421.3" y2="403.7" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="421.3" y="381.7" width="192" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="427.3" y="400.7" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Koji  -16.9°, 148.0°</text>
+<circle cx="1330.9" cy="622.8" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="1330.9" y1="622.8" x2="1346.9" y2="606.8" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="1346.9" y="584.8" width="192" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="1352.9" y="603.8" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Koji  -16.9°, 148.0°</text>
+<text x="425" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NASA DSCOVR EPIC</text>
+<text x="1275" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NICT Himawari full disk</text>
+</svg>

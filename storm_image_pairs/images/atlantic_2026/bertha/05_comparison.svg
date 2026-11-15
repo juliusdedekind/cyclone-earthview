@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="990" viewBox="0 0 900 990">
+<rect width="900" height="990" fill="#07111d"/>
+<text x="50" y="38" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="white">Bertha — frame 5</text>
+<text x="50" y="72" font-family="Arial,sans-serif" font-size="19" fill="#b9cad9">EPIC 2026-07-23T19:41:54Z · red: Bertha · gold: Fausto · nearest IBTrACS points</text>
+<image href="05_epic_20260723T194154Z.jpg" x="50" y="105" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<circle cx="510.9" cy="387.7" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="510.9" y1="387.7" x2="526.9" y2="371.7" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="526.9" y="349.7" width="201" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="532.9" y="368.7" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Bertha  29.9°, -94.5°</text>
+<circle cx="320.3" cy="458.6" r="13" fill="none" stroke="#ffd23f" stroke-width="4" stroke-opacity="0.9"/><line x1="320.3" y1="458.6" x2="336.3" y2="442.6" stroke="#ffd23f" stroke-width="3" stroke-opacity="0.8"/><rect x="336.3" y="420.6" width="210" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="342.3" y="439.6" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Fausto  18.1°, -126.9°</text>
+<text x="450" y="950" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NASA DSCOVR EPIC</text>
+</svg>

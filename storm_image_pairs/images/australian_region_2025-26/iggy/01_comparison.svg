@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="970" viewBox="0 0 1700 970">
+<rect width="1700" height="970" fill="#07111d"/>
+<text x="25" y="38" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="white">Iggy — frame 1</text>
+<text x="25" y="70" font-family="Arial,sans-serif" font-size="19" fill="#b9cad9">EPIC 2026-01-01T03:39:46Z · Himawari 2026-01-01T03:40:00Z · red marker: nearest IBTrACS point</text>
+<image href="01_epic_20260101T033946Z.jpg" x="25" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<image href="01_himawari_20260101T034000Z.png" x="875" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<circle cx="298.7" cy="394.0" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="298.7" y1="394.0" x2="314.7" y2="378.0" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="314.7" y="356.0" width="192" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="320.7" y="375.0" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Iggy  -12.7°, 108.0°</text>
+<circle cx="1038.5" cy="588.2" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="1038.5" y1="588.2" x2="1054.5" y2="572.2" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="1054.5" y="550.2" width="192" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="1060.5" y="569.2" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Iggy  -12.7°, 108.0°</text>
+<text x="425" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NASA DSCOVR EPIC</text>
+<text x="1275" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NICT Himawari full disk</text>
+</svg>

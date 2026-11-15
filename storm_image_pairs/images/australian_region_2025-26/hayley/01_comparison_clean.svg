@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="970" viewBox="0 0 1700 970">
+<rect width="1700" height="970" fill="#07111d"/>
+<text x="25" y="38" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="white">Hayley — frame 1</text>
+<text x="25" y="70" font-family="Arial,sans-serif" font-size="19" fill="#b9cad9">EPIC 2025-12-29T02:38:29Z · Himawari 2025-12-29T02:40:00Z · marker-free view</text>
+<image href="01_epic_20251229T023829Z.jpg" x="25" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<image href="01_himawari_20251229T024000Z.png" x="875" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<text x="425" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NASA DSCOVR EPIC</text>
+<text x="1275" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NICT Himawari full disk</text>
+</svg>

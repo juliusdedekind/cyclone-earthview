@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="970" viewBox="0 0 1700 970">
+<rect width="1700" height="970" fill="#07111d"/>
+<text x="25" y="38" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="white">Narelle — frame 3</text>
+<text x="25" y="70" font-family="Arial,sans-serif" font-size="19" fill="#b9cad9">EPIC 2026-03-20T03:58:28Z · Himawari 2026-03-20T04:00:00Z · red marker: nearest IBTrACS point</text>
+<image href="03_epic_20260320T035828Z.jpg" x="25" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<image href="03_himawari_20260320T040000Z.png" x="875" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<circle cx="566.1" cy="603.5" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="566.1" y1="603.5" x2="582.1" y2="587.5" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="582.1" y="565.5" width="219" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="588.1" y="584.5" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Narelle  -13.3°, 142.6°</text>
+<circle cx="1289.9" cy="595.5" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="1289.9" y1="595.5" x2="1305.9" y2="579.5" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="1305.9" y="557.5" width="219" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="1311.9" y="576.5" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Narelle  -13.3°, 142.6°</text>
+<text x="425" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NASA DSCOVR EPIC</text>
+<text x="1275" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NICT Himawari full disk</text>
+</svg>

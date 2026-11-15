@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="970" viewBox="0 0 1700 970">
+<rect width="1700" height="970" fill="#07111d"/>
+<text x="25" y="38" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="white">Mitchell — frame 3</text>
+<text x="25" y="70" font-family="Arial,sans-serif" font-size="19" fill="#b9cad9">EPIC 2026-02-09T04:26:31Z · Himawari 2026-02-09T04:30:00Z · red marker: nearest IBTrACS point</text>
+<image href="03_epic_20260209T042631Z.jpg" x="25" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<image href="03_himawari_20260209T043000Z.png" x="875" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<circle cx="343.7" cy="558.5" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="343.7" y1="558.5" x2="359.7" y2="542.5" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="359.7" y="520.5" width="228" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="365.7" y="539.5" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Mitchell  -23.8°, 113.4°</text>
+<circle cx="1086.7" cy="669.9" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="1086.7" y1="669.9" x2="1102.7" y2="653.9" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="1102.7" y="631.9" width="228" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="1108.7" y="650.9" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Mitchell  -23.8°, 113.4°</text>
+<text x="425" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NASA DSCOVR EPIC</text>
+<text x="1275" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NICT Himawari full disk</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="970" viewBox="0 0 1700 970">
+<rect width="1700" height="970" fill="#07111d"/>
+<text x="25" y="38" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="white">Bakung — frame 5</text>
+<text x="25" y="70" font-family="Arial,sans-serif" font-size="19" fill="#b9cad9">EPIC 2025-12-17T05:37:09Z · Himawari 2025-12-17T05:40:00Z · red marker: nearest IBTrACS point</text>
+<image href="05_epic_20251217T053709Z.jpg" x="25" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<image href="05_himawari_20251217T054000Z.png" x="875" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<circle cx="449.6" cy="389.9" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="449.6" y1="389.9" x2="465.6" y2="373.9" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="465.6" y="351.9" width="201" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="471.6" y="370.9" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Bakung  -12.0°, 92.7°</text>
+<circle cx="958.6" cy="580.3" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="958.6" y1="580.3" x2="974.6" y2="564.3" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="974.6" y="542.3" width="201" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="980.6" y="561.3" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Bakung  -12.0°, 92.7°</text>
+<text x="425" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NASA DSCOVR EPIC</text>
+<text x="1275" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NICT Himawari full disk</text>
+</svg>

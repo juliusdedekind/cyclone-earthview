@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="970" viewBox="0 0 1700 970">
+<rect width="1700" height="970" fill="#07111d"/>
+<text x="25" y="38" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="white">Maila — frame 1</text>
+<text x="25" y="70" font-family="Arial,sans-serif" font-size="19" fill="#b9cad9">EPIC 2026-04-07T00:31:45Z · Himawari 2026-04-07T00:30:00Z · red marker: nearest IBTrACS point</text>
+<image href="01_epic_20260407T003145Z.jpg" x="25" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<image href="01_himawari_20260407T003000Z.png" x="875" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<circle cx="379.9" cy="619.7" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="379.9" y1="619.7" x2="395.9" y2="603.7" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="395.9" y="581.7" width="192" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="401.9" y="600.7" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Maila  -9.9°, 156.4°</text>
+<circle cx="1397.6" cy="568.5" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="1397.6" y1="568.5" x2="1413.6" y2="552.5" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="1413.6" y="530.5" width="192" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="1419.6" y="549.5" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Maila  -9.9°, 156.4°</text>
+<text x="425" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NASA DSCOVR EPIC</text>
+<text x="1275" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NICT Himawari full disk</text>
+</svg>

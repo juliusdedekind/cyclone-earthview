@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="970" viewBox="0 0 1700 970">
+<rect width="1700" height="970" fill="#07111d"/>
+<text x="25" y="38" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="white">Hayley — frame 2</text>
+<text x="25" y="70" font-family="Arial,sans-serif" font-size="19" fill="#b9cad9">EPIC 2025-12-30T02:19:47Z · Himawari 2025-12-30T02:20:00Z · red marker: nearest IBTrACS point</text>
+<image href="02_epic_20251230T021947Z.jpg" x="25" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<image href="02_himawari_20251230T022000Z.png" x="875" y="90" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<circle cx="271.9" cy="422.3" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="271.9" y1="422.3" x2="287.9" y2="406.3" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="287.9" y="384.3" width="210" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="293.9" y="403.3" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Hayley  -16.4°, 121.6°</text>
+<circle cx="1131.8" cy="618.0" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="1131.8" y1="618.0" x2="1147.8" y2="602.0" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="1147.8" y="580.0" width="210" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="1153.8" y="599.0" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Hayley  -16.4°, 121.6°</text>
+<text x="425" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NASA DSCOVR EPIC</text>
+<text x="1275" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NICT Himawari full disk</text>
+</svg>

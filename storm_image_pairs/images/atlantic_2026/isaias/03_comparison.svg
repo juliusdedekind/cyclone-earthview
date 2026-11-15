@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="990" viewBox="0 0 900 990">
+<rect width="900" height="990" fill="#07111d"/>
+<text x="50" y="38" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="white">Isaias — frame 3</text>
+<text x="50" y="72" font-family="Arial,sans-serif" font-size="19" fill="#b9cad9">EPIC 2026-10-10T16:53:27Z · red marker: nearest IBTrACS point</text>
+<image href="03_epic_20261010T165327Z.jpg" x="50" y="105" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+<circle cx="425.6" cy="314.6" r="13" fill="none" stroke="#ff2b2b" stroke-width="4" stroke-opacity="0.9"/><line x1="425.6" y1="314.6" x2="441.6" y2="298.6" stroke="#ff2b2b" stroke-width="3" stroke-opacity="0.8"/><rect x="441.6" y="276.6" width="201" height="28" rx="5" fill="#101820" fill-opacity="0.62"/><text x="447.6" y="295.6" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">Isaias  33.1°, -87.1°</text>
+
+<text x="450" y="950" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NASA DSCOVR EPIC</text>
+</svg>
