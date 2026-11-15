@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="990" viewBox="0 0 900 990" data-render-version="1">
+<rect width="900" height="990" fill="#07111d"/>
+<text x="50" y="38" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="white">Arthur — frame 1 · storm zoom</text>
+<text x="50" y="72" font-family="Arial,sans-serif" font-size="18" fill="#b9cad9">EPIC 2026-06-17T17:40:17Z · 20° storm-centered window · marker-free view</text>
+<image href="01_epic_zoom.png" x="50" y="105" width="800" height="800" preserveAspectRatio="xMidYMid meet"/>
+
+<text x="450" y="950" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="white">NASA DSCOVR EPIC · 2048px source</text>
+</svg>

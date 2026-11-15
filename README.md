@@ -12,7 +12,7 @@ Cyclone Earthview is a reproducible image collection and interactive browser for
 - 75 selected observations with UTC capture times, positions, and wind speeds
 - Side-by-side NASA EPIC and Himawari views where coverage overlaps
 - Annotated and marker-free imagery
-- High-resolution storm zooms for selected systems
+- High-resolution storm zooms for every observation
 - Track maps, satellite references, intensity summaries, and source links
 - Keyboard navigation and persistent display controls
 
@@ -20,10 +20,12 @@ Cyclone Earthview is a reproducible image collection and interactive browser for
 
 Open [`storm_image_pairs/index.html`](storm_image_pairs/index.html) in a browser. The viewer is self-contained and does not require a build step or application server.
 
+The complete checkout is approximately 1.5 GB because it retains the original high-resolution imagery and source tiles used to build every zoom.
+
 Use the interface controls or keyboard shortcuts to move through the collection:
 
 - `M` toggles storm markers
-- `Z` switches between full-disk and storm-zoom views when a zoom is available
+- `Z` switches between full-disk and storm-zoom views
 - Previous/next controls and the filmstrip navigate between observations
 
 ## Collection overview
@@ -34,7 +36,7 @@ Use the interface controls or keyboard shortcuts to move through the collection:
 | 2025–26 South Pacific | Urmil, Vaianu |
 | 2026 North Atlantic | Arthur, Bertha, Cristobal, Dolly, Edouard, Fay, Gonzalo, Hanna, Isaias, Josephine |
 
-Most storms have three observations selected around peak intensity. Arthur, Bakung, and Bertha include two additional frames. Seven systems also include storm-centered high-resolution zooms.
+Most storms have three observations selected around peak intensity. Arthur, Bakung, and Bertha include two additional frames. Every observation includes a storm-centered high-resolution zoom.
 
 ## Repository structure
 
@@ -74,6 +76,12 @@ Add high-resolution zoom assets for a storm already in the collection:
 
 ```bash
 python3 tools/pull_storm_zooms.py --storm Mitchell
+```
+
+Enrich every storm that does not yet have a complete zoom set:
+
+```bash
+python3 tools/pull_storm_zooms.py --all-missing
 ```
 
 The scripts access remote archives, so a complete rebuild requires an internet connection and may take time. Existing source files and generated outputs are retained to preserve provenance.

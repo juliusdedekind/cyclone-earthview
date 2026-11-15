@@ -49,14 +49,18 @@ def png_header(value):
     return width, height, value[24], value[25]
 
 
-def download_new_png(url, destination, expected_size, require_color=True):
-    """Download a new PNG idempotently, refusing to replace an existing file."""
+def download_new_png(
+    url, destination, expected_size, require_color=True, allow_placeholder=False
+):
+    """Download a PNG idempotently, optionally skipping archive placeholders."""
     destination = pathlib.Path(destination)
     if destination.exists():
         dimensions = png_header(destination)
         if dimensions[:2] != expected_size:
             raise RuntimeError(f"Existing file has unexpected dimensions: {destination}: {dimensions[:2]}")
         if require_color and dimensions[3] not in {2, 3, 6}:
+            if allow_placeholder:
+                return None
             raise RuntimeError(f"Existing file is a placeholder rather than color imagery: {destination}")
         return destination
 
@@ -67,6 +71,8 @@ def download_new_png(url, destination, expected_size, require_color=True):
     if dimensions[:2] != expected_size:
         raise RuntimeError(f"Unexpected PNG dimensions {dimensions[:2]} for {url}")
     if require_color and dimensions[3] not in {2, 3, 6}:
+        if allow_placeholder:
+            return None
         raise RuntimeError(f"NICT returned its non-color placeholder for {url}")
     destination.parent.mkdir(parents=True, exist_ok=True)
     temporary = destination.with_suffix(destination.suffix + ".part")
@@ -197,6 +203,32 @@ def load_manifest(storm):
     return sorted(records, key=lambda row: int(row["frame"]))
 
 
+def manifest_storms():
+    """Return named storms in their manifest order."""
+    with MANIFEST.open(newline="", encoding="utf-8") as handle:
+        names = [row["storm"] for row in csv.DictReader(handle)]
+    return list(dict.fromkeys(names))
+
+
+def load_zoom_metadata():
+    metadata_path = DATA / "zoom_frames.json"
+    metadata = {"version": 1, "storms": {}}
+    if metadata_path.exists():
+        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+        metadata.setdefault("version", 1)
+        metadata.setdefault("storms", {})
+    return metadata_path, metadata
+
+
+def has_complete_zoom_metadata(metadata, storm):
+    expected = {int(row["frame"]) for row in load_manifest(storm)}
+    actual = {
+        int(frame["frame"])
+        for frame in metadata.get("storms", {}).get(storm, {}).get("frames", [])
+    }
+    return actual == expected
+
+
 def enrich_frame(record, half_span):
     storm = record["storm"]
     frame = int(record["frame"])
@@ -228,6 +260,7 @@ def enrich_frame(record, half_span):
     epic_zoom = base.render_svg(epic_zoom_svg, ZOOM_OUTPUT_SIZE, ZOOM_OUTPUT_SIZE)
 
     tile_entries = []
+    placeholder_tiles = []
     comparison_svg = zoom_folder / f"{frame:02d}_comparison_zoom.svg"
     clean_svg = zoom_folder / f"{frame:02d}_comparison_zoom_clean.svg"
     himawari_crop = None
@@ -261,7 +294,13 @@ def enrich_frame(record, half_span):
                     year=year, month=month, day=day, clock=clock, x=x, y=y,
                 )
                 destination = tile_folder / f"{himawari_stamp}_{x}_{y}.png"
-                download_new_png(url, destination, (HIMAWARI_TILE_SIZE, HIMAWARI_TILE_SIZE))
+                downloaded = download_new_png(
+                    url, destination, (HIMAWARI_TILE_SIZE, HIMAWARI_TILE_SIZE),
+                    allow_placeholder=True,
+                )
+                if downloaded is None:
+                    placeholder_tiles.append({"x": x, "y": y, "url": url})
+                    continue
                 tile_entries.append({
                     "x": x,
                     "y": y,
@@ -323,6 +362,7 @@ def enrich_frame(record, half_span):
         "himawari_tiles": [
             {key: entry[key] for key in ("x", "y", "file", "url")} for entry in tile_entries
         ],
+        "himawari_placeholder_tiles": placeholder_tiles,
         "comparison": relative(comparison),
         "clean_comparison": relative(clean_comparison),
         "coverage": "epic_himawari" if himawari_capture else "epic_only",
@@ -331,7 +371,14 @@ def enrich_frame(record, half_span):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--storm", default="Mitchell", help="Existing storm to enrich (default: Mitchell)")
+    targets = parser.add_mutually_exclusive_group()
+    targets.add_argument(
+        "--storm", help="Existing storm to enrich (default: Mitchell)"
+    )
+    targets.add_argument(
+        "--all-missing", action="store_true",
+        help="Enrich every storm without a complete set of zoom metadata",
+    )
     parser.add_argument(
         "--half-span-degrees", type=float, default=DEFAULT_HALF_SPAN_DEGREES,
         help="Degrees from the track point to each side of the zoom window",
@@ -340,26 +387,46 @@ def main():
     if not 2 <= args.half_span_degrees <= 25:
         parser.error("--half-span-degrees must be between 2 and 25")
 
-    records = load_manifest(args.storm)
-    frames = []
-    for record in records:
-        print(f'Building {record["storm"]} zoom frame {record["frame"]}...', flush=True)
-        frames.append(enrich_frame(record, args.half_span_degrees))
+    metadata_path, metadata = load_zoom_metadata()
+    if args.all_missing:
+        storms = [
+            storm for storm in manifest_storms()
+            if not has_complete_zoom_metadata(metadata, storm)
+        ]
+    else:
+        storms = [args.storm or "Mitchell"]
 
-    metadata_path = DATA / "zoom_frames.json"
-    metadata = {"version": 1, "storms": {}}
-    if metadata_path.exists():
-        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
-        metadata.setdefault("version", 1)
-        metadata.setdefault("storms", {})
-    metadata["storms"][records[0]["storm"]] = {
-        "half_span_degrees": args.half_span_degrees,
-        "frames": frames,
-    }
-    base.write_text_if_changed(
-        metadata_path, json.dumps(metadata, ensure_ascii=False, indent=2) + "\n"
+    if not storms:
+        print("Every named storm already has complete zoom metadata.", flush=True)
+
+    total_frames = 0
+    for storm in storms:
+        records = load_manifest(storm)
+        frames = []
+        for record in records:
+            print(f'Building {record["storm"]} zoom frame {record["frame"]}...', flush=True)
+            frames.append(enrich_frame(record, args.half_span_degrees))
+
+        canonical_name = records[0]["storm"]
+        metadata["storms"][canonical_name] = {
+            "half_span_degrees": args.half_span_degrees,
+            "frames": frames,
+        }
+        base.write_text_if_changed(
+            metadata_path, json.dumps(metadata, ensure_ascii=False, indent=2) + "\n"
+        )
+        total_frames += len(frames)
+        print(
+            f"Added {len(frames)} zoom frames for {canonical_name}: {metadata_path}",
+            flush=True,
+        )
+
+    base.render_existing_index()
+    print(
+        f"Zoom enrichment complete for {len(storms)} storm(s), "
+        f"{total_frames} frame(s); rebuilt {OUT / 'index.html'}",
+        flush=True,
     )
-    print(f"Added {len(frames)} zoom frames for {records[0]['storm']}: {metadata_path}", flush=True)
 
 
 if __name__ == "__main__":

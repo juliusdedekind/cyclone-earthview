@@ -10,8 +10,8 @@ Open `index.html` to review the collected storm imagery. The interface presents 
 - 41 original NICT Himawari full-disk PNGs for Australian-region and South Pacific cyclones
 - 75 standard annotated comparison PNGs, plus 3 additive Edouard multi-storm variants
 - 75 marker-free comparison PNGs used by the global annotation toggle
-- 21 additive storm-centered zoom comparisons across 7 systems, each with annotated and marker-free variants
-- 21 NASA EPIC 2048px PNG sources and 445 NICT Himawari 20d source tiles for the zoom collection
+- 75 additive storm-centered zoom comparisons across all 23 systems, each with annotated and marker-free variants
+- 75 NASA EPIC 2048px PNG sources and 960 NICT Himawari 20d color source tiles for the zoom collection
 - 23 primary Wikipedia storm insets and 3 associated Pacific-storm insets, with 52 local 1280px satellite and track assets
 
 The named systems are:
@@ -32,7 +32,7 @@ Each storm view includes:
 - frame-specific companion-storm insets when another named system is visibly corroborated in the EPIC image
 - filmstrip and previous/next controls; Arthur, Bakung, and Bertha have five frames, while the other storms have three
 - a persistent **Markers on/off** control that switches the main image and all thumbnails for every storm; the `M` key provides the same toggle
-- an independent **Full disks/Storm zoom** control for frames with zoom enrichment; the `Z` key provides the same toggle
+- an independent **Full disks/Storm zoom** control for every frame; the `Z` key provides the same toggle
 - UTC capture times, nearest track point, wind, and position
 - links to the untouched local originals and their online archives
 
@@ -48,7 +48,7 @@ Bertha observations 2–5 also contain East Pacific Hurricane Fausto. Bertha is 
 
 Edouard observations 1–3 use additive `comparison_enriched` variants while retaining their original comparison files. Marie is marked in gold and Karina in magenta on all three frames; Lowell is marked in green on frames 1 and 2, but is omitted from frame 3 because it is beyond EPIC's usable limb. The viewer supplies frame-specific Wikipedia inset cards for each visible companion.
 
-Fina, Koji, Luana, Maila, Mitchell, and Urmil observations 1–3 have additive paired storm zooms. Each frame uses the existing observation time and IBTrACS fix, a newly downloaded 2048px NASA EPIC PNG, and the highest-resolution NICT Himawari `20d/550` tiles intersecting a 20° storm-centered window. Gonzalo observations 1–3 have equivalent EPIC-only zooms because the Atlantic is outside Himawari coverage. Raw tiles, native-resolution Himawari crops, 1600px EPIC zoom crops, comparison variants, and source URLs are retained separately in each storm's `zoom/` directory. The original full-disk assets and primary manifest are unchanged.
+All 75 observations have additive storm-centered zooms. Each frame uses its existing observation time and IBTrACS fix with a newly downloaded 2048px NASA EPIC PNG. The 41 Australian-region and South Pacific frames also use the highest-resolution NICT Himawari `20d/550` tiles intersecting a 20° storm-centered window; the 34 Atlantic frames are EPIC-only because the basin is outside Himawari coverage. Two unavailable edge-of-disk Himawari placeholder tiles are recorded in the metadata and rendered as black outside the visible disk. Raw color tiles, native-resolution Himawari crops, 1600px EPIC zoom crops, comparison variants, and source URLs are retained separately in each storm's `zoom/` directory. The original full-disk assets and primary manifest are unchanged.
 
 ## Files
 
@@ -61,7 +61,7 @@ Fina, Koji, Luana, Maila, Mitchell, and Urmil observations 1–3 have additive p
 - `data/zoom_frames.json` — additive per-frame zoom geometry, local files, tile coordinates, and source URLs
 - `data/ibtracs.last3years.list.v04r01.csv` — downloaded NOAA/NCEI track data
 - `../tools/pull_storm_images.py` — reproducible collection and interface builder
-- `../tools/pull_storm_zooms.py` — targeted additive high-resolution zoom collector; defaults to Mitchell
+- `../tools/pull_storm_zooms.py` — additive high-resolution zoom collector for one storm or every incomplete storm
 - `viewer_fina.png`, `viewer_bakung.png`, `viewer_arthur.png`, `viewer_bertha.png`, `viewer_edouard.png`, `viewer_edouard_markers_off.png`, and `viewer_hanna.png` — interface previews
 
 ## Sources
